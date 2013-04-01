@@ -1,0 +1,27 @@
+<body>
+	<div id="employees">
+		<header id="header">
+			<img src="img/employees.jpg">
+			<h1>Equipo Mô</h1>
+		</header>
+		<section id="container" style="opacity: 0;">
+			<article id="template" style="display:none;" class="employee">
+				<div class="picture">
+					<img src="" alt="">
+				</div>
+					<div class="floater clearfix">
+						<div class="gender">
+						<img src="" alt="">
+					</div>
+				</div>
+				<div class="info">
+					<h1 class="name"><%= name %></h1>
+				 	<p class="bio"><%= bio %></p>
+				 	<p class="contact"><%= contact %></p>
+				</div> 
+			</article>
+		</section>
+		<div class="loading"><img src="img/ajax_loader_gray_512.gif" alt="Cargando..."></div>
+		<script type="text/javascript">App.Employees.initialize()</script>
+	</div>
+</body>

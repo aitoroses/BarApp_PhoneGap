@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<title>title</title>
+	<meta charset="utf-8" />
+	<meta name = "viewport" content = "width=device-width, maximum-scale = 1, minimum-scale=1" />
+	
+    <script src="js/zepto.js"></script>
+    <script src="js/underscore.js"></script>
+	<script src="js/backbone.js"></script>
+	<script src="js/modernizr.js"></script>
+    
+    <script src="js/scripts.js"></script>
+    <script src="sections/likes/likes.js"></script>
+    <script src="sections/employees/employees.js"></script>
+    <script src="sections/chart/chart.js"></script>
+
+
+
+
+    <script src="js/fastclick.js"></script> <!-- 300ms delay removed -->
+
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+    
+</head>
+<body onload="initFastButtons();">
+<span id="fastclick">
+<div id="outer-wrap">
+<div id="inner-wrap">
+	<header id="top" role="banner">
+        <div class="block">
+            <h1 class="block-title">Bar Mô</h1>
+            <a class="nav-btn" id="nav-open-btn" href="#nav"></a>
+        </div>
+    </header>
+	<nav id="nav" role="navigation">
+        <div class="block">
+            <h2 class="block-title">Chapters</h2>
+            <ul>
+                <li class="is-active">
+                    <a href="#" rel="1">Home</a>
+                </li><!--
+             --><li>
+                    <a href="#" rel="2">Carta</a>
+                </li><!--
+             --><li>
+                    <a href="#" rel="3">Nos gusta</a>
+                </li><!--
+             --><li>
+                    <a href="#" rel="4">Empleados</a>
+                </li><!--
+             --><li>
+                    <a href="#" rel="5">VIP</a>
+                </li>
+            </ul>
+            <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+        </div>
+    </nav>
+    <div id="main" role="main">
+    <article class="block" style="height: 1000px">
+    	
+    </article>
+    </div>
+    <footer role="contentinfo">
+        <div class="block prose">
+            <p class="small">AppContact Twitter<a href="#">@aitormurray</a></p>
+            <p class="small">Copyright © <a href="">Aitor Oses</a></p>
+        </div>
+    </footer>
+</div>
+<!-- Inner-wrap -->
+</div>
+<!-- Outer wrap -->
+</span>
+</body>
+<script src="js/main.jquery.js"></script>
+
+</html>

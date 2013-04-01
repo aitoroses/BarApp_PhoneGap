@@ -1,0 +1,109 @@
+#employees {
+    .loading{
+        $gutter: 70%;
+        img{
+            width: 100% - $gutter;
+            margin:20px $gutter/2;
+        }
+    }
+
+@mixin boxShadow($shadow){
+  -moz-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;}
+
+$boxshadow: 0 1px 10px rgba(black,0.6);
+$backgroundColor: lighten(#000, 90%);
+$gutter: 5%;
+
+html {
+  background-color: #e6e6e6; }
+
+#container {
+  width: 100%;
+  font-family: "Helvetica Neue";
+  background-color: #e6e6e6; }
+
+#header {
+  width: 100%;
+  background-color: white;
+  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+  img {
+    width: inherit; }
+  h1 {
+    padding: 30px 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline overline;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 2em; } }
+
+.employee {
+  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+  background-color: #e6e6e6;
+  width: 95%;
+  margin: 0px 2.5%;
+  margin-bottom: 20px;
+  .picture {
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%; } }
+  .floater {
+    float: left;
+    width: 95%;
+    height: 0px;
+    .gender {
+      background-color: white;
+      border: 7px double rgba(0, 0, 0, 0.1);
+      width: 80px;
+      border-radius: 100%;
+      height: 80px;
+      position: relative;
+      z-index: 1;
+      left: 0px;
+      bottom: 38px;
+      float: right;
+      img {
+        border-radius: 100%;
+        width: 100%;
+        margin-top: 8px; } } }
+  .info {
+    width: 100%;
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    background-color: white;
+    margin-top: 20px;
+    .name {
+      padding: 30px 0px 0px 0px;
+      text-align: center;
+      width: 100%;
+      font-variant: small-caps;
+      font-weight: bold;
+      font-size: 2em; }
+    .bio {
+      margin: 10%;
+      margin-bottom: 0;
+      font-variant: small-caps;
+      font-size: 1em; }
+    .contact {
+      font-variant: small-caps;
+      font-size: 1em;
+      text-align: center;
+      padding: 20px;
+      color: #2188aa; } } }
+
+
+
+
+}

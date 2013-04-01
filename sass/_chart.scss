@@ -1,0 +1,72 @@
+#chart {
+
+	.sections {
+		opacity: 0;
+		@include transition(opacity 1s ease-in-out);
+		&.show {opacity: 1}
+		$radius: 10px;
+		position: relative;
+		top: 30px;
+		$gutter: 10%;
+		width: 100% -$gutter;
+		margin: 0 $gutter/2;
+		@include box-shadow(1px 1px 5px #666666);
+		@include border-radius($radius);
+		margin-bottom: 30px;
+		.cell {
+			$border: 1px solid rgba(#333, 0.6);
+			padding: 10px;
+			border-top: $border;
+			overflow: hidden;
+			@include transition(box-shadow .1s ceaser($easeOutQuart), background-color .1s ceaser($easeOutQuart));
+			&:first-child{
+				@include border-top-radius($radius);
+				border-top: none;}
+			&:last-child{
+				@include border-bottom-radius($radius);}
+			&.press{
+				background-color: mix(#fff, #62b1ff, 95%);
+				@include box-shadow(inset 1px 1px 10px #888888);}
+			$title_width: 100%;
+			.title{
+				width: $title_width;
+				display: inline-block;
+				font:{
+					size: 24px;
+					weight: normal;
+					variant: small-caps;}
+				color: #30a0cc;}
+			.def{
+				width: $title_width;
+				display: inline-block;
+				font-size: 14px;
+			}
+			.floater {float:right;width:0;height:0}
+			.accesory {
+				position: relative;
+				right: 30px;
+				bottom:36px;
+				width: 25px;
+				display: inline-block;
+				background: url('../img/next-arrow-glow.png') no-repeat;
+				background-size: 25px;
+				height: 25px;
+				&.tickable {
+					opacity: 0;
+					background: url('../img/black-check-25px.png') no-repeat;
+					&.active {
+						opacity:1;}}}
+		}
+		&.no-subhead .accesory{
+			bottom: 25px;}
+	}
+	.animate-translateFromLeft {
+		position: relative;
+		@include transform(translate3d(-200%,0,0));
+		@include transition(transform .3s ceaser($easeOutQuart));
+		&.appear {
+			@include transform(translate3d(0,0,0));
+		}
+	}
+
+}

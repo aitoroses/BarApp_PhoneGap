@@ -1,0 +1,55 @@
+<body>
+	<div id="chart">
+		<div id="main-section" class="sections main">
+			<div class="cell wines">
+				<h1 class="title">Vinos</h1>
+				<p class="def">Echa un vistazo a la lista de vinos</p>
+				<span class="floater"><div class="accesory"></div></span>
+			</div>
+			<div class="cell">
+				<h1 class="title">Pinchos</h1>
+				<p class="def">Prueba nuestros originales pinchos</p>
+				<span class="floater"><div class="accesory"></div></span>
+			</div>
+			<div class="cell">
+				<h1 class="title">Gin Tonics</h1>
+				<p class="def">Lista de nuestros Gins</p>
+				<span class="floater"><div class="accesory"></div></span>
+			</div>
+		</div>
+		<!-- WINE CATEGORIES  -->
+		<div id="wine-categories-section" class="sections show no-subhead animate-translateFromLeft">
+			<div class="cell press" data-category="Todos">
+				<h1 class="title">Todos</h1>
+				<span class="floater"><div class="tickable accesory active"></div></span>
+			</div>
+			<div class="cell" data-category="Gran Reserva">
+				<h1 class="title">Gran Reserva</h1>
+				<span class="floater"><div class="tickable accesory"></div></span>
+			</div>
+			<div class="cell" data-category="Reserva">
+				<h1 class="title">Reserva</h1>
+				<span class="floater"><div class="tickable accesory"></div></span>
+			</div>
+			<div class="cell" data-category="Crianza">
+				<h1 class="title">Crianza</h1>
+				<span class="floater"><div class="tickable accesory"></div></span>
+			</div>
+			<div class="cell" data-category="Cosecha">
+				<h1 class="title">Cosecha</h1>
+				<span class="floater"><div class="tickable accesory"></div></span>
+			</div>
+		</div>
+		<!-- WINES -->
+		<div id="wines-section" class="sections show no-subhead animate-translateFromLeft">
+		</div>
+	</div>
+	<!-- VIEW TEMPLATES -->
+	<div style="display: none">
+		<!-- PRODUCT CELL TEMPLATE -->
+		<div id="productCell" class="cell">
+			<h1 class="title" data-id="<%= id %>"><%= name %></h1>
+		</div>
+	</div>
+	<script type="text/javascript">App.Chart.initialize();</script>
+</body>
