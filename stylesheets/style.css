@@ -575,20 +575,21 @@ footer[role="contentinfo"] {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  border: 1px solid rgba(51, 51, 51, 0.4); }
   /* line 6, ../sass/_chart.scss */
   #chart .sections.show {
     opacity: 1; }
-  /* line 16, ../sass/_chart.scss */
+  /* line 17, ../sass/_chart.scss */
   #chart .sections .cell {
     padding: 10px;
-    border-top: 1px solid rgba(51, 51, 51, 0.6);
+    border-top: 1px solid rgba(51, 51, 51, 0.4);
     overflow: hidden;
     -webkit-transition: box-shadow 0.1s cubic-bezier(0.165, 0.840, 0.440, 1.000), background-color 0.1s cubic-bezier(0.165, 0.840, 0.440, 1.000);
     -moz-transition: box-shadow 0.1s cubic-bezier(0.165, 0.840, 0.440, 1.000), background-color 0.1s cubic-bezier(0.165, 0.840, 0.440, 1.000);
     -o-transition: box-shadow 0.1s cubic-bezier(0.165, 0.840, 0.440, 1.000), background-color 0.1s cubic-bezier(0.165, 0.840, 0.440, 1.000);
     transition: box-shadow 0.1s cubic-bezier(0.165, 0.840, 0.440, 1.000), background-color 0.1s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
-    /* line 22, ../sass/_chart.scss */
+    /* line 23, ../sass/_chart.scss */
     #chart .sections .cell:first-child {
       -moz-border-radius-topleft: 10px;
       -webkit-border-top-left-radius: 10px;
@@ -597,7 +598,7 @@ footer[role="contentinfo"] {
       -webkit-border-top-right-radius: 10px;
       border-top-right-radius: 10px;
       border-top: none; }
-    /* line 25, ../sass/_chart.scss */
+    /* line 26, ../sass/_chart.scss */
     #chart .sections .cell:last-child {
       -moz-border-radius-bottomleft: 10px;
       -webkit-border-bottom-left-radius: 10px;
@@ -605,13 +606,13 @@ footer[role="contentinfo"] {
       -moz-border-radius-bottomright: 10px;
       -webkit-border-bottom-right-radius: 10px;
       border-bottom-right-radius: 10px; }
-    /* line 27, ../sass/_chart.scss */
+    /* line 28, ../sass/_chart.scss */
     #chart .sections .cell.press {
       background-color: #f7fbff;
       -webkit-box-shadow: inset 1px 1px 10px #888888;
       -moz-box-shadow: inset 1px 1px 10px #888888;
       box-shadow: inset 1px 1px 10px #888888; }
-    /* line 31, ../sass/_chart.scss */
+    /* line 32, ../sass/_chart.scss */
     #chart .sections .cell .title {
       width: 100%;
       display: inline-block;
@@ -619,17 +620,17 @@ footer[role="contentinfo"] {
       font-weight: normal;
       font-variant: small-caps;
       color: #30a0cc; }
-    /* line 39, ../sass/_chart.scss */
+    /* line 40, ../sass/_chart.scss */
     #chart .sections .cell .def {
       width: 100%;
       display: inline-block;
       font-size: 14px; }
-    /* line 44, ../sass/_chart.scss */
+    /* line 45, ../sass/_chart.scss */
     #chart .sections .cell .floater {
       float: right;
       width: 0;
       height: 0; }
-    /* line 45, ../sass/_chart.scss */
+    /* line 46, ../sass/_chart.scss */
     #chart .sections .cell .accesory {
       position: relative;
       right: 30px;
@@ -639,17 +640,17 @@ footer[role="contentinfo"] {
       background: url("../img/next-arrow-glow.png") no-repeat;
       background-size: 25px;
       height: 25px; }
-      /* line 54, ../sass/_chart.scss */
+      /* line 55, ../sass/_chart.scss */
       #chart .sections .cell .accesory.tickable {
         opacity: 0;
         background: url("../img/black-check-25px.png") no-repeat; }
-        /* line 57, ../sass/_chart.scss */
+        /* line 58, ../sass/_chart.scss */
         #chart .sections .cell .accesory.tickable.active {
           opacity: 1; }
-  /* line 60, ../sass/_chart.scss */
+  /* line 61, ../sass/_chart.scss */
   #chart .sections.no-subhead .accesory {
     bottom: 25px; }
-/* line 63, ../sass/_chart.scss */
+/* line 64, ../sass/_chart.scss */
 #chart .animate-translateFromLeft {
   position: relative;
   -webkit-transform: translate3d(-200%, 0, 0);
@@ -661,7 +662,7 @@ footer[role="contentinfo"] {
   -moz-transition: -moz-transform 0.3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
   -o-transition: -o-transform 0.3s cubic-bezier(0.165, 0.840, 0.440, 1.000);
   transition: transform 0.3s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
-  /* line 67, ../sass/_chart.scss */
+  /* line 68, ../sass/_chart.scss */
   #chart .animate-translateFromLeft.appear {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);

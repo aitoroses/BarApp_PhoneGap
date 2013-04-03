@@ -74,7 +74,13 @@
             });
           });
         }), 'tickable');
-        winesSection = new App.Chart.Controllers.SectionController('#wines-section', (function() {}), 'default');
+        winesSection = new App.Chart.Controllers.SectionController('#wines-section', function() {
+          return $('#wines-section .cell').click(function() {
+            var id;
+            id = $(this).find('.title').data('id');
+            return location.href = "" + (App.Chart.productUrl('wine', id));
+          });
+        });
         /* 
         			*************************************************************
         			PINCHOS
@@ -96,6 +102,9 @@
         return this.collections.wineCellList.fetch({
           reset: true
         });
+      },
+      productUrl: function(type, id) {
+        return "" + this.baseUrl + "application/" + type + "/" + id;
       },
       /* 
       		*************************************************************
@@ -194,6 +203,10 @@
               });
             };
 
+            SectionController.prototype.refresh = function() {
+              return this.handler();
+            };
+
             SectionController.prototype.show = function() {
               var _this = this;
               return setTimeout(function() {
@@ -203,6 +216,7 @@
 
             SectionController.prototype.appear = function() {
               var _this = this;
+              this.refresh();
               return setTimeout(function() {
                 $(_this.selector).show();
                 return $(_this.selector).addClass('appear');
@@ -222,10 +236,13 @@
             SectionController.prototype.change = function(handler) {
               var _this = this;
               $(this.selector).removeClass('appear');
-              handler();
+              setTimeout(function() {
+                return handler();
+              }, 400);
               return setTimeout(function() {
+                _this.refresh();
                 return $(_this.selector).addClass('appear');
-              }, 500);
+              }, 600);
             };
 
             return SectionController;

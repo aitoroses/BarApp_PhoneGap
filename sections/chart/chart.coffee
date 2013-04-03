@@ -62,7 +62,11 @@ $(document).ready ->
 						_List.reset(filtered_models)
 						_ListView.render()
 				), 'tickable'
-			winesSection = new App.Chart.Controllers.SectionController '#wines-section' ,( -> ) , 'default'
+			winesSection = new App.Chart.Controllers.SectionController '#wines-section' , ->
+				$('#wines-section .cell').click ->
+					id = $(this).find('.title').data('id')
+					location.href =  "#{App.Chart.productUrl('wine', id)}"
+
 			### 
 			*************************************************************
 			PINCHOS
@@ -87,6 +91,9 @@ $(document).ready ->
 			# Append the view
 			$('#wines-section').append @collectionViews.wineCellListView.el
 			@.collections.wineCellList.fetch({reset: true})
+
+		productUrl: (type, id) ->
+			"#{@baseUrl}application/#{type}/#{id}"
 
 
 		### 
@@ -156,11 +163,15 @@ $(document).ready ->
 							if(accesoryType == 'tickable')
 								$(sel).find('.accesory').removeClass('active')
 								$(@).find('.accesory').addClass('active')
+					refresh: ->
+						# Refreshes the action of the actual cells
+						@handler()
 					show: ->
 						setTimeout( =>
 							$(@selector).toggleClass('show')
 						, 300)
 					appear: ->
+						@refresh()
 						setTimeout( =>
 							$(@selector).show()
 							$(@selector).addClass('appear')
@@ -174,8 +185,12 @@ $(document).ready ->
 						, 300)
 					change: (handler) =>
 						$(@selector).removeClass('appear')
-						handler()
+						setTimeout( =>	
+							handler()
+						, 400)
 						setTimeout( =>
+							@refresh()
 							$(@selector).addClass('appear')
-						, 500)
+						, 600)
+
 
