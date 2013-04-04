@@ -65,7 +65,7 @@ $(document).ready ->
 			winesSection = new App.Chart.Controllers.SectionController '#wines-section' , ->
 				$('#wines-section .cell').click ->
 					id = $(this).find('.title').data('id')
-					location.href =  "#{App.Chart.productUrl('wine', id)}"
+					App.Chart.showWindow('wine', id)
 
 			### 
 			*************************************************************
@@ -94,6 +94,21 @@ $(document).ready ->
 
 		productUrl: (type, id) ->
 			"#{@baseUrl}application/#{type}/#{id}"
+
+		showWindow: (type, id) ->
+			#$('.window').load("#{App.Chart.productUrl(type, id)}")
+			$('.window').load("sections/chart/views/product.html")
+			$('#chart').animate({opacity:0}, 100)
+			setTimeout( ->
+				$('.window').addClass('appear')
+			, 300)
+			location.href = '#'
+		goback: ->
+			$('.window').removeClass('appear')
+			setTimeout( ->
+				$('#chart').animate({opacity:1}, 100)
+			, 300);
+
 
 
 		### 

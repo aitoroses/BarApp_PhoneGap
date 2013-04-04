@@ -78,7 +78,7 @@
           return $('#wines-section .cell').click(function() {
             var id;
             id = $(this).find('.title').data('id');
-            return location.href = "" + (App.Chart.productUrl('wine', id));
+            return App.Chart.showWindow('wine', id);
           });
         });
         /* 
@@ -105,6 +105,24 @@
       },
       productUrl: function(type, id) {
         return "" + this.baseUrl + "application/" + type + "/" + id;
+      },
+      showWindow: function(type, id) {
+        $('.window').load("sections/chart/views/product.html");
+        $('#chart').animate({
+          opacity: 0
+        }, 100);
+        setTimeout(function() {
+          return $('.window').addClass('appear');
+        }, 300);
+        return location.href = '#';
+      },
+      goback: function() {
+        $('.window').removeClass('appear');
+        return setTimeout(function() {
+          return $('#chart').animate({
+            opacity: 1
+          }, 100);
+        }, 300);
       },
       /* 
       		*************************************************************

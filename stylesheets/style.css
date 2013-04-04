@@ -670,6 +670,40 @@ footer[role="contentinfo"] {
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
 
+/* line 74, ../sass/_chart.scss */
+#product-window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  height: 0;
+  width: 0; }
+  /* line 81, ../sass/_chart.scss */
+  #product-window .window {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 90px;
+    overflow-y: scroll;
+    min-height: 1000px;
+    height: 100%;
+    width: 100vw;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    -moz-transition: -moz-transform 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    -o-transition: -o-transform 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    transition: transform 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000); }
+    /* line 91, ../sass/_chart.scss */
+    #product-window .window.appear {
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+
 /* line 2, ../sass/_likes.scss */
 #likes .container {
   width: auto;
